@@ -1,0 +1,47 @@
+.content{
+    height: 694px;
+}
+.content__fullstack{
+    width: 100%;
+    height: 100%;
+    background-image: url("https://image.freepik.com/free-vector/full-stack-developer-is-working-computers_173125-65.jpg");
+}
+.content__fullstack > img{
+    margin: 27px 100px 0px 280px;
+    width: 70px;
+    height: 95px;
+}
+
+.content__language{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 180px;
+    margin-right: 40px;
+    padding-top: 110px;
+}
+.content__language-python{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color:white;
+    background-color:yellowgreen;
+    box-shadow: 1px 1px 1px black;
+}
+.content__language-django{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color:white;
+    background-color:yellowgreen;
+    box-shadow: 1px 1px 1px black;
+}

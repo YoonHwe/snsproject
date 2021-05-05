@@ -1,0 +1,35 @@
+h2{
+    text-align: center;
+}
+
+p{
+    margin-top: -3px;
+}
+
+.content__univ{
+    height: 50%;
+    padding: 0px 30px;
+
+}
+
+.content__hobby{
+    height: 50%;
+    padding: 0px 30px;
+    margin-top: 11px;
+}
+.content__univ-data{
+    display: flex;
+    justify-content: space-between;
+}
+.content__univ-image, .content__univ-video{
+    text-align: center;
+}
+.content__univ-image > img{
+    width: 270px;
+    height: 270px;
+    border-radius: 10px;
+}
+
+.content__univ-video > iframe{
+    border-radius: 10px;
+}

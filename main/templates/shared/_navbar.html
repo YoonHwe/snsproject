@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .nav-link{
+          border: 1px solid black;
+          background-color: rgb(253, 157, 68);
+          font-weight: 300;
+        }
+        .navbar-nav{
+          display: flex;
+          justify-content: space-between;
+        }
+        .nav-link:hover{
+          font-weight: 600;
+          background-color: rgb(253, 122, 0);
+        }
+        .navbar{
+          height: 55px;
+          background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="{% url 'showmain' %}">OOO Main OOO</a>
+              <a class="nav-link" href="{% url 'past' %}">OOO Past OOO</a>
+              <a class="nav-link" href="{% url 'present' %}">OOO Present OOO</a>
+              <a class="nav-link" href="{% url 'future' %}">OOO Future OOO</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+</body>
+</html>

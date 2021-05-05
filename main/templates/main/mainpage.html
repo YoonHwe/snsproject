@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce Yoonhwe</title>
+</head>
+<body>
+    
+    <div class="unable3">
+        <p>화면 크기를 조금 늘려보시겠어요?</p>
+    </div>
+
+    <div class="content">
+        <img class="my-image" src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.6435-9/167361048_2241772449289275_5109037201421467214_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeHqFx_fieXkMmXbbV8ptFG44TINU6ymANfhMg1TrKYA1-ZfxJonzy0M1H0fHfQynsyaVdMjeyPtb601ib1Mt8oO&_nc_ohc=meiaKsZTewkAX_BuYmL&_nc_ht=scontent-gmp1-1.xx&oh=bd99ee614cacde6a9fd0aaceb32f9427&oe=60B41FCA"/>
+        <img class="my-image" src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.6435-9/167553040_2241772479289272_252880912004160912_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeFc8f9MixGNbPetpB3MVOW2vuuk-w0yevG-66T7DTJ68Z49CkqR3TbbTNMQz0GmbtQpzH0HC0mTO2aVGzUQP651&_nc_ohc=PEp68IJf0u4AX9SSSJB&_nc_ht=scontent-gmp1-1.xx&oh=490847e45c089bd30cd0936087001cf1&oe=60B51737"/>
+        <img class="my-image" src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.18169-0/c0.257.540.540a/s552x414/16708215_1005447979588401_6635709429014959598_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=da31f3&_nc_eui2=AeER9jANq2hzcHfDLQdj-WulEkBqPZ4V6v0SQGo9nhXq_X0jsUmHFEWS1-z-rTgKVpegLRWZtvIxk_b7NbDt-XHm&_nc_ohc=BCtV2Rmm83gAX9VipID&_nc_ht=scontent-gmp1-1.xx&tp=28&oh=3276b8b3ca87a72534e64937d4a75d1e&oe=60B413CD"/>
+        <img class="my-image" src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.6435-9/165577040_2241772372622616_3053766438897326360_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_eui2=AeF5DDaqDoGrzSxSzw4z3xrii4QMrOxfaFmLhAys7F9oWVQsPHMroHhwuvktHoIstDIMkXulUR-eXdDVPIiWu6YK&_nc_ohc=vn5-G-mFgJsAX9M_dlR&_nc_ht=scontent-gmp1-1.xx&oh=0cc0db9adf971fbe463aaa75f841635f&oe=60B308D1"/>  
+    </div>
+
+    
+
+    
+        <div class="base">
+            {% extends 'base.html' %}
+            {% load static %}
+            {% block content %}
+            
+            <div class="base__title">
+                <img class="like-lion" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVAAAACWCAMAAAC/8CD2AAAAwFBMVEX///8NCgrzmSYAAAD6+vqGhYWlpKQKBgb1s2fymij9nRfNzc360Zufnp7h4eFXVlbHx8f71qeAf39RUFCOjY3++fDa2tq2trb7vnz5mh8YFBQ0MjKYl5d1c3OysbHg4ODykgD98uLu7u7z8/MhHx/Av79JR0dqaWk8OjooJiZiYGBDQkKrqqoxLy94d3ccGRn5vHL52bT7sVj9x4z74MT6q0T9pjP76NT7t2P6oCH869n63Ln+rk/8pC/9mwT6zpUx5hv/AAAKeklEQVR4nO2d+2OiOBDHYQfNdV3Q9Vmtj6vgs9a21927fd79///VoahMYIKog1ib749IXh8myWQSxDCykvX8/cOBumn/cURBHWEeIugUhuyNPY9e/mpfHFABtRZ7Q8+m+9fv7ZsPNxcEFJ7qA/ZmnlGNL18/XhJQGI8s9kaeV/e3H9upiWYMFODNjp5YX36lHkkzBQpwV2JvXC5qvP6dEmmWQOGx8NZ7e6iXb+1UI2l2QAXMK9fD0x9J/7tJM5JmBhSgeA2jJ1aq6T4joAIemuwNyl+vbX8kTWaaDVDwui57ay5BX77lYaEA8yuZ3ONqfPravkmy0QyAwqN9neYZ6J9vf656vQoqO1CASYW9ERelxqfvCdM9N1Awi9dsnoF+fFNP97xAAcYOe/UvUZ+/qqZ7TqAC7mz2ql+o/nlW9HtGoGD2rtH3VKjhGylFlA8oPPavbWmUrB/P1EjKBVTA5H2Mnlif2/EtJyag4PWvKRCSVvfPvzMBCk/L92eeazVefkWiehxA4aHPXtM3ox+v8sLpdKBgFt7R5B5X4+Xvj5wWCtPWexw9se7xdH8iUIDe+/KVaP0MN/FOAipgOmKv3JvU/e3v9ulAYXYVe8Q8evlr45MeDxTKb/4IA6fuX9urtejRFgpQf6e+p1Jffq8mp+OAAjyWtHnGdPv7SAsVXv36w8jH6OevoyzUmuvJnVbjtn0UUD25K3QkUC2VNFBmaaDM0kCZpYEySwNllgbKLA2UWRooszRQZmmgzNJAmaWBMksDZZYGyiwNlFkaKLM0UGZpoMzSQJmlgTJLA2WWBsosDZRZGiizNFBmaaDMWgF9zrsS1yQf6Idfnw/Wp0beFb9UrYB++Hiw/r3Pu+KXqhXQm8P1pwaqkA80/R85htJAVVp3eQ2UTxooszRQZmmgzNJAmaWBMksDZZYGyiwNlFmN22NWnnrpqVTj+d/DQyM6OKKW9fPTMfpPh++0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0MpNbKRaWk8mkt6z3m2z/OVzcyd73v9AVe3fv9vsQzd0lm/rYY/jzSqt/TnVbxVQi/mUVJV3s+xPW8FabvtVqFqaA1anZQxqqE9ZK8UFLBzXTQHnu+SqJtQxv7W6uFcJLk3iK0h2usr2qr/MAqUR80WMwTvxZqioqhfhsouX0VzSlj7KIVRMqFP1RmJfi+999VHEDZdnaU8sq7G7dfu6tvrsEy1iC5hjC3DePy6mha2pRxJxymHQf0LAUiDNwij5volCf6aQV/3/sSngvzEl7b6FHwwe0F6s3Zgc2cfFYoEKcArRfJnEGSDvxT9lVcDOqVHHnAWpJ9mlvxiceCz0BqFV9SqwBTKMjHwZqwoIo7jxA7zDP7na8zxvoYLyvfAEFudtLQIVJDKPnAOqWSZ55Ay1NUxQf+USgBNSEh/gwegagwwnmWQ/9kXzH0NJe+wzSSHOPDNSffWPzVvZA3aU0kCP/LlcL9X02uRix8XVi311coipHgIpOMeqvZg90iaooP1EEVECCMgEaeZg+yPGybnercy/KdOdox4Ga4EWH0cyB9rB9yp81Q0C9QtFWivD3Tu7yBWl2ARiP3MDWLKs06chIvRBGFKgJs4iJZgzUwhWHpYwmBCqmioWcSqdaaMvDPM25XPywMJPco9pg+0sMqP+jXFy2QN2uZJ+RAAECelcxDopInAh0OEf1Ep4dm1pG0ogQeiZxoNKIYGQM1LK9pKWaDPQgnQh0gYAIoD4Z1MTIYbY1UQKo8KT0GQK1jAXmOY4FsFiAHjOGOpJjTH+CaSDdU990IAKo3zJcgywttAWJPPOz0JG00FAMNtjvF+bmHgqo7/yjvpch0BH2l8pEgDUvoO48aSDaqfWE6r9ZtpNApdVKVkAtoyJQfWpUq/MC6oRPWnjqgl3k8UE5uEYDNSHElZmFVlBABB7IRuc1hvZRzXoJ3wQceQh8cB8GigxGmDvHKiugeASCsDiZSk5+KIotPFERuJ2Q7ySCqSsEKqZz5MvCfPtgsgFadWeYp6LJaKU067b6tBYjyoZOAhoanqLrbFVHjQi8TQy0JAd9NmmyATp/RM/WU1U63VqebPMpXd5CmIjNL6QBHhvWVxDQx5KF439QDNJkAtTE+wrCU234pYo2oXUfTnqChWJMheS04ewF8/UFBPSuZJTw5+w300A2QGUkM9WOaz5A0cQiislpZyHQsiunXQE1ithEy2sH7AxAfaeeziQnoMit39fMMGYKNQqoHPtZjwrnAKrYH+QBevgY2k8PNAzqw3htfxGgkUVs0Xe/zwKU3h98AxY63mOhqwUq9kYrZ7JQE0g/8/LH0HBxQo+hvvq4rmMnS6AC94YJFXbPp8s30SxfT04rkmf5teQQupsdUNGp4qLq8ZhOOj90zG2hw9R+KL4z5odugbp491QsRggBK1ABlSFeuol42BEtPb2q3VWIPF130koJeZe1xKN7rZgtE0CNZgfddlftZAMUVgN0Ey2YAGJ1z2stjzaQlYuOtdDacgOEAupfRBMThsAIFGbrDPp4KTGOdnqWPaWDx1BLWtJVE4pF9iCeAnMggVpdFHjC4gO6XW668jAapZJTPLSEKvqY0DXqOKAbXCKBymdjsgAqzP7mwQ8fMOXIMJpbxB6HFuOHabaSIpCxiD0GagzuSKJ80aZw8mxiEx3Lbc8rwGyhzW0BfcVgM1ziuzbYFUCx0WcCdHeC2TLknXnFyZEzb9I1PTyLNCmilmXjim+jUgqgFr2qyeQojiWFYW2cSW5AXeyMC/KQvrXAt3jbLUaVhRpWjyAqA02cdQ84LOZIp5cxuPwOOpSkE8Cz+GH6IbZP8uRIBCi57ENATXr3P6zlAedDWzMchkWdnsUPFYoNq7CqBFCrjv0c8AqRh1KRpm3ybFMUqDF6jBHFQHvKlcv6aR4ClAgabqjIe0otWv0+MQ/jsFlBVdWFqwIqeR+rXj+tIqSjnsymE8bKEoBa3ShPCajwp09S4BwKFDcJ3S73ko5a+16rUdb0YaAE6k/Lki8O4I2ri0qzNCr27iKnGXE0NwGotLCKA1UqWEEe9tKCg162ELPdaJLuBDM5aUhAVTUdJwA1ipFjtSg8E8lmjspNBGpED+2nASqOAYqD5OhUDtOLX8p0iUCNrkmvF2O50GfsKaAlT65VdkDloOG2C+UL1Op2UhQPZan0ZKDG4mxA5b0XzjfpEtIlAzWsork3E5jIPsQeoNL8mylQYzTDi5PBJQD18YjYOx9yDlCIeON7gBoOPqebKVDp0DBM3YsA6i/jPDVSENOYN74PqLRpxwg0/jaydDhw8+5P/kD9njN5opECPNTj4fy9QHGU3zTUGztIgR968PvyhoNfmBerF2gd9NJ7kqj35Wsp0k0DoKgUgsFw1DNjb3v5PlTNppa0lTAv1XmYeniLUUijYPnRqu4ubJfho92lKrmxUAqTFKpd/+m7drWQQlXi8PPQTpGwG1hYeCuVk59XqbtmHoTd1/7orDdyyFjGIMy9rvjTC7e+a5VhpVGQLHZBcQ0rlk2q8ujMTqxqJDPXGdXn09V5z85jbblousrI0P7M0C3/A6DlHTYnb/B3AAAAAElFTkSuQmCC"/>
+                <h1>안녕하세요</h1>
+                <h2>Lv.1 아기사자 허윤회입니다</h2>
+            </div>
+            <div class="base__main">
+                <div class="base__main-birthday">
+                    <i class="fas fa-birthday-cake"></i>: 1997 / 08 / 16
+                </div>
+                <div class="base__main-major">
+                    <i class="fas fa-book"></i>: 경영학 / 컴퓨터공학
+                </div>
+                <div class="base__main-hobby">
+                    <i class="fas fa-heart"></i>: 여행 / 농구
+                </div>
+                <div class="base__main-MBTI">
+                    <a href="https://www.16personalities.com/ko/성격유형-isfp" target="_blank"><span><i class="fas fa-male">: ISFP</i></a></span>
+                </div>
+                <div class="base__main-sns">
+                    <a href="https://www.facebook.com/profile.php?id=100003696259053" target="_blank"><span><i class="fab fa-facebook-square">FACEBOOK</i></span></a>
+                    <a href="https://www.instagram.com/heo_u_ne/" target="_blank"><span><i class="fab fa-instagram-square">INSTAGRAM</i></span></a>
+                </div>
+                
+            </div>
+
+            <div class="menu">
+                <a class="menu__previous" href="#"><i class="far fa-arrow-alt-circle-left fa-2x"></i></a>
+                여러분은 허윤회의 사진 역사를 보고 계십니다
+                <a class="menu__next" href="{% url 'past' %}"><i class="far fa-arrow-alt-circle-right fa-2x"></i></a>
+            </div>
+
+            <footer>
+                <div>&copy; HeoYoonHwe</div>
+                <div><i class="fas fa-phone">010-2752-9950</i></div>
+            </footer>
+            {% endblock %}
+        </div>
+      
+    <script
+        src="https://kit.fontawesome.com/6478f529f2.js"
+        crossorigin="anonymous"
+    ></script>
+</body>
+
+
+</html>
