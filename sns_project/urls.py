@@ -25,4 +25,7 @@ urlpatterns = [
     path('past/',views.show_past, name= "past"),
     path('present/',views.show_present, name= "present"),
     path('future/',views.show_future, name= "future"),
+    path('<str:id>', views.detail, name="detail"),
+    path('new/',views.new, name= "new"),
+    path('create/',views.create, name= "create"),
 ]
