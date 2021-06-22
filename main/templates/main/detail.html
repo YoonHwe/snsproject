@@ -7,8 +7,17 @@
 작성자: {{post.writer}}
 날짜: {{post.pub_date}}
 <hr>
+<<<<<<< HEAD
 
 <p>{{post.body}}</p>
 <a href="{% url 'edit' blog.id %}">수정하기</a>
 
+=======
+{% if post.image %}
+    <p><img src="{{post.image.url}}" alt="사진"></p>
+{% endif %}
+<p>{{post.body}}</p>
+<a href="{% url 'main:edit' post.id %}">수정하기</a>
+<a href="{% url 'main:delete' post.id %}">삭제하기</a>
+>>>>>>> 021553fc165883fe174d18e03eea355a32959e76
 {% endblock %}

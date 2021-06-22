@@ -13,7 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from os import stat
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path
 from main import views
 
@@ -30,3 +32,13 @@ urlpatterns = [
     path('edit/<str:id>', views.edit, name="edit"),
     path('update/<str:id>', views.update, name="update"),
 ]
+=======
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('main.urls'))
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+>>>>>>> 021553fc165883fe174d18e03eea355a32959e76
