@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path
 from main import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.showmain, name="showmain"),
@@ -28,4 +27,6 @@ urlpatterns = [
     path('<str:id>', views.detail, name="detail"),
     path('new/',views.new, name= "new"),
     path('create/',views.create, name= "create"),
+    path('edit/<str:id>', views.edit, name="edit"),
+    path('update/<str:id>', views.update, name="update"),
 ]
