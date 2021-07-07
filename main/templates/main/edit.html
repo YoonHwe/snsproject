@@ -2,19 +2,6 @@
 {% load static %}
 
 {% block content %}
-<<<<<<< HEAD
-<div class="container">
-	<h1>글 수정하기</h1>
-	<form action="{% url 'update' post.id %}" method="post">
-		{%csrf_token%}
-		<p>제목 : <input type="text" name="title" value="{{post.title}}"></p>
-		<p>작성자 : <input type="text" name="writer" value="{{post.writer}}"></p>
-		<p>내용 : <textarea type="text" name="body" id="" cols="30" rows="10" {{post.body}}></textarea></p>
-		<button type="submit">제출</button>
-	</form>
-</div>
-{% endblock %}
-=======
 
 <form action = "{% url 'main:update' post.id %}" method = "post">
     {% csrf_token %}
@@ -25,4 +12,3 @@
 </form>
 
 {% endblock %}
->>>>>>> 021553fc165883fe174d18e03eea355a32959e76
