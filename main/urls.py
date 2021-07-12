@@ -16,4 +16,8 @@ urlpatterns = [
     path('update/<str:id>',views.update, name= "update"),
     path('delete/<str:id>',views.delete, name= "delete"),
     path('more/',views.more, name= "more"),
+    path('<str:post_id>/create_comment', views.create_comment, name="create_comment"),
+    path('<str:post_id>/edit_comment', views.edit_comment, name="edit_comment"),
+    path('<str:post_id>/update_comment', views.update_comment, name="update_comment"),
+    path('<str:post_id>/delete_comment', views.delete_comment, name="delete_comment"),
 ]

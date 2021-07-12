@@ -10,3 +10,25 @@
 <br><a href="{% url 'main:more' %}">글 목록으로 돌아가기</a>
 <br><a href="{% url 'main:edit' post.id %}">수정하기</a>
 <br><a href="{% url 'main:delete' post.id %}">삭제하기</a>
+<br><br><br><br><br>
+<h3>[댓글]</h3>
+<div>
+    {% for comment in comments %}
+    <div>
+        <br>
+        작성자: {{comment.writer}}<br>
+        {{comment.content}}
+        <br><a href="{% url 'main:edit_comment' comment.id %}">수정하기</a>
+        <br><a href="{% url 'main:delete_comment' comment.id %}">삭제하기</a>
+    </div>
+    {% endfor %}
+</div>
+<br><br><br><br><br>
+<div>
+	<form action="{%url 'main:create_comment' post.id%}" method="POST">
+		{%csrf_token%}
+		<textarea name="content" placeholder="댓글내용입력"></textarea>
+		<input type="submit" value="확인">
+	</form>
+</div>
+

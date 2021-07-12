@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 
+{% if user.is_authenticated %}
 <div class="content">
     {% for post in posts %}
     <div>
@@ -46,7 +47,10 @@
         <div>&copy; HeoYoonHwe</div>
         <div><i class="fas fa-phone">010-2752-9950</i></div>
     </footer>
-    
-    
 </div>
+{% else %}
+<h3>로그인 후 이용 가능</h3>
+<a class="nav-link" href="{% url 'account_login' %}">OOO LOGIN OOO</a>
+<a class="nav-link" href="{% url 'account_signup' %}">OOO SIGNUP OOO</a>
+{% endif %}
 {% endblock %}

@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +140,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #이용자가 업로드한 파일을 모으는 곳
 MEDIA_URL = '/media/'
+
+AUTHENTICATION_BACKENDS = [
+    #superuser 로그인 기능
+    'django.contrib.auth.backends.ModelBackend',
+    #이메일등의 로그인 기능
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
