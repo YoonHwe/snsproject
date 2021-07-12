@@ -1,6 +1,14 @@
 <h1>{{post.title}}</h1>
 <br>
+{% if post.writer %}
+{% if 'user' in post.writer.username %}
+<br>작성자: {{post.writer.last_name}} {{post.writer.first_name}}
+{% else %}
 <br>작성자: {{post.writer}}
+{% endif %}
+{% else %}
+<br>작성자: Who Are You? MoFu
+{% endif %}
 <br>날짜: {{post.pub_date}}
 <br>
 {% if post.image %}

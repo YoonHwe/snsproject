@@ -7,7 +7,16 @@
     {% for post in posts %}
     <div>
         <h6>{{post.title}}</h6>
-        by {{post.writer}}<br>
+        {% if post.writer %}
+        {% if 'user' in post.writer.username %}
+        by {{post.writer.last_name}} {{post.writer.first_name}}
+        {% else %}
+        by {{post.writer}}
+        {% endif %}
+        {% else %}
+        by Who Are You? MoFu
+        {% endif %}
+        <br>
         {{post.body}}<br>
         <a href ="{%url 'main:detail' post.id %}">...자세히</a>
     </div>

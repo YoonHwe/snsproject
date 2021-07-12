@@ -82,4 +82,4 @@ def update_comment(request, post_id):
 def delete_comment(request, post_id):
     delete_comment = Comment.objects.get(id=post_id)
     delete_comment.delete()
-    return redirect('main:detail', post_id)
+    return redirect('main:more')
