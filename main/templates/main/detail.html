@@ -1,13 +1,13 @@
 <h1>{{post.title}}</h1>
 <br>
 {% if post.writer %}
-{% if 'user' in post.writer.username %}
-<br>작성자: {{post.writer.last_name}} {{post.writer.first_name}}
+    {% if 'user' in post.writer.username and post.writer.username != 'user' %}
+        <br>작성자: <a href="{% url 'users:mypage' post.writer.id %}">{{post.writer.last_name}} {{post.writer.first_name}}</a>
+    {% else %}
+        <br>작성자: <a href="{% url 'users:mypage' post.writer.id %}">{{post.writer}}</a>
+    {% endif %}
 {% else %}
-<br>작성자: {{post.writer}}
-{% endif %}
-{% else %}
-<br>작성자: Who Are You? MoFu
+    <br>작성자: Who Are You? MoFu
 {% endif %}
 <br>날짜: {{post.pub_date}}
 <br>
