@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
+from django.http import HttpResponse
+import json
 
 # Create your views here.
 def showmain(request):
@@ -83,3 +87,40 @@ def delete_comment(request, post_id):
     delete_comment = Comment.objects.get(id=post_id)
     delete_comment.delete()
     return redirect('main:more')
+
+@login_required
+@require_POST
+
+def like_toggle(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    post_like, post_like_created = Like.objects.get_or_create(user=request.user, post=post)
+
+    if not post_like_created:
+        post_like.delete()
+        result = "like_cancel"
+    else:
+        result = "like"
+    
+    context = {
+        "like_count":post.like_count,
+        "result":result
+    }
+
+    return HttpResponse(json.dumps(context), content_type="application/json")
+
+def dislike_toggle(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    post_dislike, post_dislike_created = Dislike.objects.get_or_create(user=request.user, post=post)
+
+    if not post_dislike_created:
+        post_dislike.delete()
+        result = "dislike_cancel"
+    else:
+        result = "dislike"
+    
+    context = {
+        "dislike_count":post.dislike_count,
+        "result":result
+    }
+
+    return HttpResponse(json.dumps(context), content_type="application/json")
